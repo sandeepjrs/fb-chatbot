@@ -22,12 +22,12 @@ let token = ""
 
 // Facebook
 
-// app.get('/webhook/', function(req, res) {
-// 	if (req.query['hub.verify_token'] === "blondiebytes") {
-// 		res.send(req.query['hub.challenge'])
-// 	}
-// 	res.send("Wrong token")
-// })
+app.get('/webhook/', function(req, res) {
+	if (req.query['hub.verify_token'] === "chatfb") {
+		res.send(req.query['hub.challenge'])
+	}
+	res.send("Wrong token")
+})
 //
 // app.post('/webhook/', function(req, res) {
 // 	let messaging_events = req.body.entry[0].messaging
